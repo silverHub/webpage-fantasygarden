@@ -1,291 +1,120 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    margin-left: calc(100vw - 100%);
+    background: url(../images/bg-garden-hd.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+html,body{
+    height: 100%;
+    overflow-y: hidden;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.page-centered{
     position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+    top: 10%;
+    right: 20%;
+    left: 20%;
+    bottom: 10%;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+.hero{
+    display: flex;
+    min-width: 520px;
+    max-width: 980px;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+    /*opacity: 0;*/
+    animation-fill-mode: forwards;
+    background: rgba(52, 27, 43, 0.7);
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+    border-radius: 4px;
+}
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
+.hero form{
+    line-height: 2em;
+}
+.hero p{
+    letter-spacing: 0.1em;
+}
+
+.hero form input{
+    height: 36px;
+    outline: none;
+    padding: 0;
+}
+
+.hero form input[type='email']{
+    background-color: #281e24;
+    color: #fff;
+    padding-left: 10px;
+    border: 1px solid darkgrey;
+}
+.hero form input[type='email']:focus{
+    border: 2px solid #90f6a1;
+}
+.hero form input::placeholder {
+    color: #b8d9b0;
+    font-size: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero form{
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.hero form input[type='submit']{
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 1px solid darkgrey;
+    color: white;
+    cursor: pointer
+}
+.hero form input[type='submit']:focus{
+    border: 2px solid #90f6a1;
+}
+
+.hero form input[type='submit']:active{
+    /*border: 1px solid darkgrey;*/
+    box-shadow: #90f6a1;
+}
+
+
+.hero h1{
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    border-bottom: double 5px;
+    border-top: double 5px;
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: 0.2em;
     margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+    padding-left: 0.05em;
+    position: relative;
+    text-transform: uppercase;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.btn {
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #203327 0%, #233527d4 51%, #23352a 100%);
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
 }
 
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 30px;
+    text-align: center;
+    margin: auto;
 }
