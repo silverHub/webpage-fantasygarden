@@ -16,6 +16,7 @@ function handleEmailPersisted(msgContainer, emailForm) {
 $(function() {
   var emailForm = $('#emailForm');
   var msgContainer = $('.messagebox');
+  $('.hero').addClass('fadeInDown');
 
   emailForm.on('submit', function handleEmailSubmit(event) {
     event.preventDefault();
