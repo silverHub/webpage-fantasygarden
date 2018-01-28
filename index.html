@@ -23,15 +23,15 @@
 
         <main>
             <div class="page-centered">
-            <section class="hero animated">
+            <section class="hero animated fadeInDown">
                 <div>
                     <h1>Fantaziakert.hu</h1>
                 </div>
-                <p> Készülj, nemsokára startolunk! </p>
-                <form id="form" class="animated bounceIn">
-                    <!--<label>Ha szeretnél értesítést kapni az indulásról add meg az email címed.</label><br/>-->
-                    <input required name="email" id="email" autofocus type="email" placeholder="Add meg az emailed..." /><input class="btn" type="submit" value="Értesítést kérek!" /><br/>
-                    <small>Az oldal nem küld hírlevelet!</small>
+                <p> Készülj, nemsokára indul az oldal! </p>
+                <p class="messagebox success animated">Hamarosan jelentkezünk!</p>
+                <form id="emailForm" class="animated zoomIn delayed-half">
+                    <input required name="email" id="email" autofocus type="email" placeholder="Emailcímed?" /><input class="btn" type="submit" value="Értesítést kérek az indulásról!" /><br/>
+                    <small>Nem fogunk hírlevelekkel zaklatni!</small>
                 </form>
             </section>
             </div>
@@ -42,9 +42,8 @@
 
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -53,5 +52,18 @@
             // ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyC6Z_YcnHcfbcspvc04X-ttifh_XgDCk_c",
+                authDomain: "fantaziakert-3d964.firebaseapp.com",
+                databaseURL: "https://fantaziakert-3d964.firebaseio.com",
+                projectId: "fantaziakert-3d964",
+                storageBucket: "fantaziakert-3d964.appspot.com",
+                messagingSenderId: "465828424574"
+            };
+            firebase.initializeApp(config);
+        </script>
     </body>
 </html>

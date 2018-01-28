@@ -1,120 +1,180 @@
 html {
-    margin-left: calc(100vw - 100%);
-    background: url(../images/bg-garden-hd.jpg) no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+  margin-left: calc(100vw - 100%);
+  background: url(../images/bg-garden-hd.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
 }
 
-html,body{
-    height: 100%;
-    overflow-y: hidden;
+body {
+  overflow-y: hidden;
 }
 
-.page-centered{
+.hidden{
+    display: none;
+}
+.delayed-1 {
+  animation-delay: 1s;
+}
+.delayed-half {
+  animation-delay: 0.5s;
+}
+
+.page-centered {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  left: 10%;
+  bottom: 5%;
+}
+
+.hero {
+  display: flex;
+  min-width: 280px;
+  max-width: 980px;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  animation-fill-mode: forwards;
+  background: rgba(52, 27, 43, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 1em;
+  transition: all;
+}
+
+.hero p {
+  letter-spacing: 0.1em;
+}
+
+.hero form input {
+  color: #e0e0e0;
+  height: 36px;
+  outline: none;
+  padding: 0;
+  border: 1px solid darkgrey;
+}
+
+.hero form input:focus {
+  border: 1px solid #90f6a1;
+}
+
+.hero form input[type='email'] {
+  background-color: #281e24;
+  color: #fff;
+  padding-left: 10px;
+}
+.hero form input::placeholder {
+  color: #b8d9b0;
+  opacity: 0.5;
+  font-size: 80%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero form input[type='submit'] {
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 80%;
+}
+.hero form input[type='submit']:active {
+  box-shadow: #90f6a1;
+}
+
+.hero form small {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.hero h1 {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  border-bottom: double 5px;
+  border-top: double 5px;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn {
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #203327 0%,
+    #233527d4 51%,
+    #23352a 100%
+  );
+}
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.messagebox.success {
+  width: 50%;
+    height: 0;
+  margin: 0 auto;
+  visibility: hidden;
+  padding: 3px;
+  border: 1px solid grey;
+  background-color: rgba(40, 80, 0, 0.5);
+}
+.messagebox.success.fadeIn {
+  visibility: visible;
+}
+footer {
+  display: none;
+}
+@media (min-height: 400px) {
+  footer {
+    display: block;
     position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) {
+  .page-centered {
     top: 10%;
     right: 20%;
     left: 20%;
     bottom: 10%;
-}
-
-.hero{
-    display: flex;
+  }
+  .hero {
     min-width: 520px;
     max-width: 980px;
-    height: 250px;
-    flex-direction: column;
-    justify-content: space-between;
-    /*opacity: 0;*/
-    animation-fill-mode: forwards;
-    background: rgba(52, 27, 43, 0.7);
-    color: #fff;
+
     padding: 2em;
-    text-align: center;
-    border-radius: 4px;
-}
-
-.hero form{
-    line-height: 2em;
-}
-.hero p{
-    letter-spacing: 0.1em;
-}
-
-.hero form input{
-    height: 36px;
-    outline: none;
-    padding: 0;
-}
-
-.hero form input[type='email']{
-    background-color: #281e24;
-    color: #fff;
-    padding-left: 10px;
-    border: 1px solid darkgrey;
-}
-.hero form input[type='email']:focus{
-    border: 2px solid #90f6a1;
-}
-.hero form input::placeholder {
-    color: #b8d9b0;
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.hero form{
-    opacity: 0;
-    animation-delay: 1s;
-}
-
-.hero form input[type='submit']{
-    margin-left: 10px;
-    border-radius: 10px;
-    padding: 0 15px;
-    border: 1px solid darkgrey;
-    color: white;
-    cursor: pointer
-}
-.hero form input[type='submit']:focus{
-    border: 2px solid #90f6a1;
-}
-
-.hero form input[type='submit']:active{
-    /*border: 1px solid darkgrey;*/
-    box-shadow: #90f6a1;
-}
-
-
-.hero h1{
-    display: inline-block;
-    font-family: 'Lato', sans-serif;
-    border-bottom: double 5px;
-    border-top: double 5px;
+  }
+  .hero h1 {
     font-size: 2.5em;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    margin: 0;
-    padding-left: 0.05em;
-    position: relative;
-    text-transform: uppercase;
+  }
 }
+@media (max-width: 520px) {
+  body{
+      font-size: 110%;
+  }
+  .hero {
+      padding-top: 40px;
+      height: 290px;
+  }
+  .hero h1 {
+    font-size: 1.2em;
+  }
 
-.btn {
-    transition: 0.5s;
-    background-size: 200% auto;
-    background-image: linear-gradient(to right, #203327 0%, #233527d4 51%, #23352a 100%);
-}
-
-.btn:hover {
-    background-position: right center; /* change the direction of the change here */
-}
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 30px;
-    text-align: center;
-    margin: auto;
+    .hero form input{
+        height: 46px;
+    }
+  .hero form input[type='submit'] {
+    margin-left: 10px;
+    margin-top: 16px;
+    padding: 0 20px;
+    font-size: 100%;
+  }
 }
