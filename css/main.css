@@ -4,10 +4,12 @@ html {
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   color: #e0e0e0;
+  height: 100%;
 }
 
 body {
   overflow-y: hidden;
+  height: 100%;
 }
 
 .hidden{
