@@ -1,5 +1,3 @@
-// var onAnimationEndEvent =
-//   'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
 function persistEmail() {
   var emailAddress = $('#email')[0].value;
@@ -13,10 +11,13 @@ function handleEmailPersisted(msgContainer, emailForm) {
     emailForm.hide();
 }
 
+$(window).on("load",function loadContent() {
+    $('.animation-container').addClass('bg-loaded');
+});
+
 $(function() {
   var emailForm = $('#emailForm');
   var msgContainer = $('.messagebox');
-  $('.hero').addClass('fadeInDown');
 
   emailForm.on('submit', function handleEmailSubmit(event) {
     event.preventDefault();

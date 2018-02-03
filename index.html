@@ -14,7 +14,6 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/animate.min.css">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -23,18 +22,20 @@
 
         <main>
             <article class="page-centered">
-            <section class="hero animated">
+                <div class="animation-container">
+            <section class="hero">
                 <div>
                     <h1>Fantaziakert.hu</h1>
                 </div>
-                <p> Készülj, nemsokára indul az oldal! </p>
-                <mark class="messagebox success animated">Hamarosan jelentkezünk!</mark>
+                <p> Nemsokára indul az oldal! </p>
+                <mark class="messagebox success">Hamarosan jelentkezünk!</mark>
                 <form id="emailForm">
                     <input class="email" required name="email" id="email" autofocus type="email" placeholder="Emailcímed?" />
                     <input class="btn" type="submit" value="Értesítést kérek az indulásról!" /><br/>
                     <small>Nem fogunk hírlevelekkel zaklatni!</small>
                 </form>
             </section>
+                </div>
             </article>
         </main>
         <footer>

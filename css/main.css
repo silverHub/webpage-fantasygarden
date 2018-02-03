@@ -14,12 +14,7 @@ body {
 .hidden {
   display: none;
 }
-.delayed-1 {
-  animation-delay: 1s;
-}
-.delayed-half {
-  animation-delay: 0.5s;
-}
+
 main {
   display: flex;
 }
@@ -28,6 +23,17 @@ main {
   margin: auto;
   width: 580px;
   padding: 2em;
+}
+
+.animation-container {
+  margin: 0;
+  padding: 0;
+  transform: translate(0, -400px);
+  transition: 0.3s ease-in-out;
+  will-change: auto;
+}
+.animation-container.bg-loaded {
+  transform: translate(0, 0);
 }
 
 .hero {
@@ -113,16 +119,19 @@ main {
   text-transform: uppercase;
 }
 .messagebox.success {
+  opacity: 0; /* show after successful form post */
   color: #e0e0e0;
   width: 70%;
   margin: 0 auto;
-  visibility: hidden;
   padding: 3px;
-  background-color: rgba(40, 80, 0, 0.5);
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
-.messagebox.success.fadeIn {
-  visibility: visible;
+
+.messagebox.fadeIn{
+    opacity: 1;
 }
+
 footer {
   display: none; /* hide footer if height < 400 */
 }
