@@ -53,9 +53,10 @@ main {
 .hero .email {
   background-color: #281e24;
   color: #fff;
-  padding-left: 10px;
 }
+
 .hero .email::placeholder {
+  padding-left: 10px;
   color: #b8d9b0;
   opacity: 0.5;
   font-size: 80%;
@@ -154,7 +155,7 @@ footer {
   }
 
   .hero .btn {
-    margin-top: 8px;
+    margin: 12px 0 0 0;
     padding: 10px;
     font-size: 90%;
   }
