@@ -10,7 +10,7 @@ function persistEmail() {
 
 function handleEmailPersisted(msgContainer, emailForm) {
     msgContainer.height('auto').toggleClass('fadeIn');
-    emailForm.toggleClass('delayed-half zoomIn zoomOut');
+    emailForm.hide();
 }
 
 $(function() {
